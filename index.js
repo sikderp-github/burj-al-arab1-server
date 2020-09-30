@@ -14,7 +14,7 @@ var serviceAccount = require("./burj-al-arab7-firebase-adminsdk-t2qrj-1cb41aa50b
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://burj-al-arab7.firebaseio.com"
+    databaseURL: process.env.FIRE_DB
 });
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.gjdo1.gcp.mongodb.net/burjAlArab1?retryWrites=true&w=majority`;
